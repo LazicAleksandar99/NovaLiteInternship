@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\NovaLite.Todo.Apii.props" />
+</Project>

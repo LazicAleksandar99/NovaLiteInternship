@@ -1,0 +1,17 @@
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 60%;
+    cursor: pointer;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }

@@ -1,0 +1,84 @@
+.todo-list {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+.todo-list__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2b2b2b;
+  }
+  
+.todo-list__description {
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #4d4d4d;
+  }
+  
+.todo-list__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+.todo-list__item {
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+.todo-list__item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+  }
+  
+.todo-list__item:checked:before {
+    content: "\2713";
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2db5a3;
+    border: 2px solid #2db5a3;
+  }
+  
+.todo-list__item label {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #2b2b2b;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out;
+  }
+  
+.todo-list__item label:hover {
+    color: #2db5a3;
+  }
+  
+.todo-list__item input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  }

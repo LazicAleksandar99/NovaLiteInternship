@@ -1,0 +1,46 @@
+<!-- <div class="card-pointer card text-dark bg-info mb-3" style="max-width: 18rem;" (click) = "ShowDetails()">
+    <div class="card-header">
+      <h1 class="card-title mt-3">{{todoList.title}}</h1>
+    </div>
+    <div class="card-body text-dark">
+      <p class="card-text">{{todoList.description}}</p>
+      <ul *ngFor="let item of todoList.todoItems" >
+        <li> 
+          <p> {{item.content}} </p>
+        </li>
+      </ul>
+    </div>
+</div> -->
+
+
+<div class="todo-list" (click) = "ShowDetails()">
+   <div class="card-header">
+  <h2 class="todo-list__title">{{todoList.title}}</h2>
+  </div>
+  <br/>
+  <p class="todo-list__description">{{todoList.description}}</p>
+  <!-- <ul class="todo-list__items">
+    <li class="todo-list__item">
+      <input type="checkbox" id="item1" name="item1" class="todo-list__item-checkbox">
+      <label for="item1">Item 1</label>
+    </li>
+    <li class="todo-list__item">
+      <input type="checkbox" id="item2" name="item2" class="todo-list__item-checkbox">
+      <label for="item2">Item 2</label>
+    </li>
+    <li class="todo-list__item">
+      <input type="checkbox" id="item3" name="item3" class="todo-list__item-checkbox">
+      <label for="item3">Item 3</label>
+    </li>
+  </ul> -->
+
+  <ul class="todo-list__items" *ngFor="let item of todoList.todoItems" >
+    <li class="todo-list__item"> 
+      <label > {{item.content}} </label>
+    </li>
+  </ul>
+
+</div>
+
+
+

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NovaLite.Todo.Apii.props" />
+</Project>

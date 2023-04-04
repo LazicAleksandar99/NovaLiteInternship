@@ -1,0 +1,17 @@
+<td> 
+  <form [formGroup]="itemForm">
+    <input type="text" class="form-control " formControlName="content" value="{{item.content}}" >
+  </form>
+</td>
+<td>
+  <select #itemCode class="form-select" (change)="onSelected(itemCode.value, item.id)" (selectstart)="item.status">
+    <!-- <option [selected]="item.status" [value]="option.value" *ngFor="let option of statusCodes">{{option.viewValue}}</option> -->
+    <option [value]="statusCodes[item.status].value">{{statusCodes[item.status].viewValue}}</option>
+    <ng-container *ngFor="let option of statusCodes">
+      <option [value]="option.value" *ngIf="option.value !== item.status">{{option.viewValue}}</option>
+    </ng-container>
+  </select>
+</td>
+<td>
+  <button class="btn btn-secondary" (click)="UpdateTodoItem(item.id, item.status, item.listId)">Update</button>
+</td>

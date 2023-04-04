@@ -1,0 +1,17 @@
+<!-- <div class="container">
+    <div class="row">
+    <div class="col-md-3 mx-auto my-5" *ngFor="let list of todolists$ | async">
+        <app-card [todoList]="list"></app-card>
+    </div>
+    </div>
+</div> -->
+
+<div style="padding-top: 60px;">
+    <div class="card-wrapper" *ngFor="let list of todolists$ | async">
+    <div class="card" >
+      <div class="card-body">
+         <app-card [todoList]="list"></app-card>
+      </div>
+    </div>
+  </div>
+</div>

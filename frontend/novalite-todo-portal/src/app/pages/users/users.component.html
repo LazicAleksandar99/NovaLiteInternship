@@ -1,0 +1,31 @@
+<table class="table table-hover" style="background-color: #d8dadb;display: block; height: 400px; overflow: auto; width: fit-content; margin-left: auto; margin-right: auto;">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">id</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Roles</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users$ | async; let i = index">
+      <td>{{1+i}}</td>
+      <td>{{user.id}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.role}}</td>
+      <td>
+        <select #userrole class="form-select" (change)="onSelected(userrole.value, user.id)" >
+          <option [value]="user.role">{{user.role}}</option>
+          <ng-container *ngFor="let option of roles">
+            <option [value]="option.value" *ngIf="option.value !== user.role">{{option.viewValue}}</option>
+          </ng-container>
+        </select>
+      </td>
+      <td>
+        <button class="btn btn-success" (click)="ChangeRole(user.id,user.email,user.role)">Update</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

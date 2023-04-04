@@ -1,0 +1,141 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <br/>
+            <br/>
+            <a class="nav-link pointer" (click)="scrollToSection('todolist')"  aria-current="page">
+              <span data-feather="home"></span>
+              Todo List
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="scrollToSection('tasks')">
+              <span data-feather="file"></span>
+              Tasks
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="scrollToSection('reminder')">
+              <span data-feather="shopping-cart"></span>
+              Reminder
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer"  (click)="scrollToSection('attachments')">
+              <span data-feather="users"></span>
+              Attachments
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <br/>     
+        </div>
+
+        <div class="card">
+          <section id="todolist">
+          <div class="card-header">
+            <h2 style="color:black">Todo List</h2>
+          </div>
+          <br/>
+          <div style="margin: auto">        
+            <app-todo-details style="margin: auto; height: 300px;" [todoList]="todolist$ | async" [component]="component" [todoListId] = "todoListId"></app-todo-details>
+          </div>
+          <br/>
+          </section>
+        </div>
+
+        <br/>
+
+        <div class="card">
+        <section id="tasks">
+          <div class="card-header">
+            <h2 style="color:black">Tasks</h2>
+          </div>
+          <br/>
+
+          <div class="container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Content</th>
+                  <th>Status..</th>
+                  <th>Action..</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container  *ngFor="let item of (todolist$ | async)?.todoItems">
+                  <tr >
+                    <td colspan="3" style="text-align: center;">
+                      <app-item [item]="item"></app-item>
+                    </td>
+                    
+                  </tr>
+                </ng-container>
+              </tbody>  
+            </table>
+          
+            <div class="form">
+              <form [formGroup]="itemForm" style="margin-bottom: 1rem;">
+                  <label class="labels">New item</label>
+                  <input type="text" class="form-control" formControlName="content" placeholder="content" >
+                  <span *ngIf="!content.valid && (content.touched)" class="alert alert-danger">
+                    Please provide item content
+                  </span>
+                <br/>
+                  <button (click)="addItem()">Add Item</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        </div>
+        <br/>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 style="color:black">Reminder</h2>
+          </div>
+          <br/>
+          <section id="reminder">
+            <form [formGroup]="dateTimeForm" novalidatetime id="formId" style="margin: auto ;max-width: 15rem;">
+              <div class="form-group">
+                  <ejs-datetimepicker formControlName="dateTime" name="dateTime" placeholder='Select a date and Time'
+                      floatLabelType='Always'>
+                  </ejs-datetimepicker>
+              </div>
+              <div *ngIf="dateTimeForm.controls['dateTime'].hasError('required') && dateTimeForm.controls['dateTime'].touched"
+                  class="alert alert-danger">DateTime value is requried</div>
+            </form>
+              <button (click)="addReminder()">Add Reminder</button>
+          </section>
+        </div>
+        <br/>
+        <div class="card">
+          <section id="attachments">
+            <div class="card-header">
+              <h2 style="color:black">Attachments</h2>
+            </div>
+            <br/>
+            <app-blob-storage></app-blob-storage>
+          </section>
+        </div>
+    </main>
+  </div>
+</div>
+
+
+<!---->
+
+  <!-- <div class="div-todolist" style="margin: auto ;max-width: 40rem;">
+      <app-todo-details [todoList]="todolist$ | async" [component]="component" [todoListId] = "todoListId"></app-todo-details>
+  </div> -->
+
+    <!-- <div class="card-body text-dark" *ngFor="let item of (todolist$ | async)?.todoItems" >
+      <app-item [item]="item"></app-item>
+    </div> -->

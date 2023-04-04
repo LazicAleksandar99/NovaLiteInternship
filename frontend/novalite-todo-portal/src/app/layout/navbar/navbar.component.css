@@ -1,0 +1,33 @@
+.nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    border-bottom: .25rem solid transparent;
+  }
+  
+.nav-link:hover,
+.nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+  }
+  
+.nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+  
+.active {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .header-pointer{
+    cursor: pointer;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+  }

@@ -1,0 +1,20 @@
+
+
+<table>
+  <thead>
+    <tr>
+      <th style="color:black">File Name</th>
+      <th style="color:black">Download</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let attachment of attachments$ | async">
+      <td style="color:black">{{attachment.fileName}}</td>
+      <td><button (click)="downloadFile(attachment.id,attachment.fileName)">Download</button></td>  
+    </tr>
+  </tbody>
+</table>
+
+<div class="file-upload">
+  <input type="file" (change)="createBlobInContainer($event)"/>
+</div>

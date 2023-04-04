@@ -1,0 +1,17 @@
+<header class="mb-auto">
+  <div >
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-body-tertiary fixed-top nav-masthead float-md-end">
+      <h1 class="header-pointer float-md-end mb-0 ms-2" [routerLink]="['']" >Cover</h1>
+      <div class="d-flex ms-auto">
+      <div class="menu-items">
+      <p class="nav-link  mt-1" [routerLink]="['lists']" *appHasRole="roles" >Tasks</p>
+      <p class="nav-link  mt-1" [routerLink]="['new']"  *appHasRole="roles">Add Task</p>
+      <p class="nav-link  mt-1" [routerLink]="['users']" *appHasRole="rolesRestricted">Users</p>
+      <p class="nav-link me-3 mt-1" *ngIf="loginDisplay" (click)="logout()">Sign Out</p>  
+      </div>
+      <p class="nav-link me-3 mt-1" aria-current="page" *ngIf="!loginDisplay" (click)="login()">Sign In</p>
+
+      </div>
+    </nav>
+  </div>
+</header>

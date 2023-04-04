@@ -1,0 +1,12 @@
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\NovaLite.Todo.Core.csproj.AssemblyReference.cache
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\NovaLite.Todo.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\NovaLite.Todo.Core.AssemblyInfoInputs.cache
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\NovaLite.Todo.Core.AssemblyInfo.cs
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\NovaLite.Todo.Core.csproj.CoreCompileInputs.cache
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\bin\Debug\net6.0\NovaLite.Todo.Core.deps.json
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\bin\Debug\net6.0\NovaLite.Todo.Core.dll
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\bin\Debug\net6.0\NovaLite.Todo.Core.pdb
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\NovaLite.Todo.Core.dll
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\refint\NovaLite.Todo.Core.dll
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\NovaLite.Todo.Core.pdb
+C:\Users\student\internship-aleksandar-lazic\backend\NovaLite.Todo.Apii\NovaLite.Todo.Core\obj\Debug\net6.0\ref\NovaLite.Todo.Core.dll
